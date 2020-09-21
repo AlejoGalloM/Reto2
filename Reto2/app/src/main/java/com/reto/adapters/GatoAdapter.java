@@ -50,7 +50,7 @@ public class GatoAdapter extends BaseAdapter {
         if (view != null) {
             holder = (GatoAdapter.ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.gato_item_layout, viewGroup, false);
             holder = new GatoAdapter.ViewHolder(view);
             view.setTag(holder);
         }

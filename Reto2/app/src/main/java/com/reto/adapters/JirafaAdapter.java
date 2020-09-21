@@ -50,7 +50,7 @@ public class JirafaAdapter extends BaseAdapter {
         if (view != null) {
             holder = (JirafaAdapter.ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.jirafa_item_layout, viewGroup, false);
             holder = new JirafaAdapter.ViewHolder(view);
             view.setTag(holder);
         }

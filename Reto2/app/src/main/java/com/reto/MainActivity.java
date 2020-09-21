@@ -54,7 +54,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        editSearch = (EditText) findViewById(R.id.editSearch);
         loadInfo();
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 
@@ -72,22 +90,22 @@ public class MainActivity extends AppCompatActivity {
         listViewAnimales.setAdapter(perroAdapter);
 
         gatoAdapter = new GatoAdapter(this, listaAnimales);
-        //listViewAnimales.setAdapter(gatoAdapter);
+        listViewAnimales.setAdapter(gatoAdapter);
 
         colibriAdapter = new ColibriAdapter(this, listaAnimales);
-        //listViewAnimales.setAdapter(colibriAdapter);
+        listViewAnimales.setAdapter(colibriAdapter);
 
         focaAdapter = new FocaAdapter(this, listaAnimales);
-        //listViewAnimales.setAdapter(focaAdapter);
+        listViewAnimales.setAdapter(focaAdapter);
 
         jirafaAdapter = new JirafaAdapter(this, listaAnimales);
-        //listViewAnimales.setAdapter(jirafaAdapter);
+        listViewAnimales.setAdapter(jirafaAdapter);
 
         osoAdapter = new OsoAdapter(this, listaAnimales);
-        //listViewAnimales.setAdapter(osoAdapter);
+        listViewAnimales.setAdapter(osoAdapter);
 
         conejoAdapter = new ConejoAdapter(this, listaAnimales);
-        //listViewAnimales.setAdapter(conejoAdapter);
+        listViewAnimales.setAdapter(conejoAdapter);
 
     }
 }

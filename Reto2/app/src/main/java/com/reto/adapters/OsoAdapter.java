@@ -50,7 +50,7 @@ public class OsoAdapter extends BaseAdapter {
         if (view != null) {
             holder = (OsoAdapter.ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.oso_item_layout, viewGroup, false);
             holder = new OsoAdapter.ViewHolder(view);
             view.setTag(holder);
         }

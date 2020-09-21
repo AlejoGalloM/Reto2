@@ -50,7 +50,7 @@ public class FocaAdapter extends BaseAdapter {
         if (view != null) {
             holder = (ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.foca_item_layout, viewGroup, false);
             holder = new ViewHolder(view);
             view.setTag(holder);
         }

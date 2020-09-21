@@ -50,7 +50,7 @@ public class ColibriAdapter extends BaseAdapter {
         if (view != null) {
             holder = (ColibriAdapter.ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.colibri_item_layout, viewGroup, false);
             holder = new ColibriAdapter.ViewHolder(view);
             view.setTag(holder);
         }

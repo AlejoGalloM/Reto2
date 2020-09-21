@@ -51,7 +51,7 @@ public class ConejoAdapter extends BaseAdapter {
         if (view != null) {
             holder = (ConejoAdapter.ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.conejo_item_layout, viewGroup, false);
             holder = new ConejoAdapter.ViewHolder(view);
             view.setTag(holder);
         }
