@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Reto#2</string>
+    <string name="perro">Canino Cachorro</string>
+    <string name="foca">Foca</string>
+    <string name="jirafa">Jirafa</string>
+    <string name="Oso">Oso</string>
+    <string name="colibri">Colibri</string>
+    <string name="Conejo">Conejo</string>
+    <string name="Gato">Gato</string>
+    <string name="buscar">Buscar</string>
+    <string name="animales">Algunos animales con su descripcion</string>
+</resources>
