@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/imagenPerro"
-                android:layout_width="199dp"
-                android:layout_height="160dp"
+                android:layout_width="165dp"
+                android:layout_height="88dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -75,6 +75,26 @@
                 app:layout_constraintStart_toStartOf="@+id/txtPerro"
                 app:layout_constraintTop_toBottomOf="@+id/txtPerro"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/btnPerro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="2dp"
+                android:onClick="audioPerro"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtDescripcionPerro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagenPerro"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

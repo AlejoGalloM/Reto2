@@ -3,10 +3,22 @@ package com.reto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.reto.adapters.ColibriAdapter;
+import com.reto.adapters.ConejoAdapter;
+import com.reto.adapters.FocaAdapter;
+import com.reto.adapters.GatoAdapter;
+import com.reto.adapters.JirafaAdapter;
+import com.reto.adapters.OsoAdapter;
 import com.reto.adapters.PerroAdapter;
 import com.reto.entity.Animales;
 
@@ -18,6 +30,11 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
+    public void audioPerro(View view){
+        MediaPlayer audioPerro = MediaPlayer.create(getApplicationContext(), R.raw.perro);
+        audioPerro.start();
+    }
+
     @BindView(R.id.listViewAnimales)
     public ListView listViewAnimales;
 
@@ -25,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
     public EditText editSearch;
 
     private PerroAdapter perroAdapter;
+    private GatoAdapter gatoAdapter;
+    private ColibriAdapter colibriAdapter;
+    private ConejoAdapter conejoAdapter;
+    private JirafaAdapter jirafaAdapter;
+    private OsoAdapter osoAdapter;
+    private FocaAdapter focaAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +71,23 @@ public class MainActivity extends AppCompatActivity {
         perroAdapter = new PerroAdapter(this, listaAnimales);
         listViewAnimales.setAdapter(perroAdapter);
 
+        gatoAdapter = new GatoAdapter(this, listaAnimales);
+        //listViewAnimales.setAdapter(gatoAdapter);
+
+        colibriAdapter = new ColibriAdapter(this, listaAnimales);
+        //listViewAnimales.setAdapter(colibriAdapter);
+
+        focaAdapter = new FocaAdapter(this, listaAnimales);
+        //listViewAnimales.setAdapter(focaAdapter);
+
+        jirafaAdapter = new JirafaAdapter(this, listaAnimales);
+        //listViewAnimales.setAdapter(jirafaAdapter);
+
+        osoAdapter = new OsoAdapter(this, listaAnimales);
+        //listViewAnimales.setAdapter(osoAdapter);
+
+        conejoAdapter = new ConejoAdapter(this, listaAnimales);
+        //listViewAnimales.setAdapter(conejoAdapter);
+
     }
-
-
 }

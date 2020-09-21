@@ -9,4 +9,5 @@
     <string name="Gato">Gato</string>
     <string name="buscar">Buscar</string>
     <string name="animales">Algunos animales con su descripcion</string>
+    <string name="audioPerro">Sonar</string>
 </resources>
