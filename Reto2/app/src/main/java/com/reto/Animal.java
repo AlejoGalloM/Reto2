@@ -21,6 +21,7 @@ public class Animal extends AppCompatActivity {
         ImageButton sound = (ImageButton) findViewById(R.id.btnSound);
         TextView name = (TextView) findViewById(R.id.textName);
         TextView descp = (TextView) findViewById(R.id.textDesc);
+        ImageButton pause = (ImageButton) findViewById(R.id.pause);
 
         final Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -33,7 +34,12 @@ public class Animal extends AppCompatActivity {
             sound.setOnClickListener(v -> {
                 MediaPlayer media = MediaPlayer.create(getApplicationContext(), positionSound);
                 media.start();
+                pause.setOnClickListener(p -> {
+                    media.pause();
+                });
             });
+
+
         }
     }
 }
