@@ -47,7 +47,7 @@ public class ZorroAdapter extends BaseAdapter {
         if (view != null) {
             holder = (ZorroAdapter.ViewHolder) view.getTag();
         } else {
-            view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
+            view = inflater.inflate(R.layout.zorro_item_layout, viewGroup, false);
             holder = new ZorroAdapter.ViewHolder(view);
             view.setTag(holder);
         }
