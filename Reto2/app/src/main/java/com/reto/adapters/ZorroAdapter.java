@@ -17,29 +17,24 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PerroAdapter extends BaseAdapter {
-
+public class ZorroAdapter extends BaseAdapter {
 
     private final List<Animales> listaAnimalesOut;
     private final List<Animales> listaAnimalesIn;
     private final LayoutInflater inflater;
 
 
-    public PerroAdapter(Context context, List<Animales> listaAnimales) {
+    public ZorroAdapter(Context context, List<Animales> listaAnimales) {
         listaAnimalesOut = listaAnimales;
         listaAnimalesIn = listaAnimales;
         inflater = LayoutInflater.from(context);
     }
 
     @Override
-    public int getCount() {
-        return listaAnimalesOut.size();
-    }
+    public int getCount() { return listaAnimalesOut.size();}
 
     @Override
-    public Animales getItem(int i) {
-        return listaAnimalesOut.get(i);
-    }
+    public Object getItem(int i) {return listaAnimalesOut.get(i);}
 
     @Override
     public long getItemId(int i) {
@@ -48,29 +43,28 @@ public class PerroAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-
-        ViewHolder holder;
+        ZorroAdapter.ViewHolder holder;
         if (view != null) {
-          holder = (ViewHolder) view.getTag();
+            holder = (ZorroAdapter.ViewHolder) view.getTag();
         } else {
             view = inflater.inflate(R.layout.perro_item_layout, viewGroup, false);
-            holder = new ViewHolder(view);
+            holder = new ZorroAdapter.ViewHolder(view);
             view.setTag(holder);
         }
 
-        holder.imagenPerro.setImageResource(listaAnimalesOut.get(i).getImagen());
-        holder.txtPerro.setText(listaAnimalesOut.get(i).getNombre());
-        holder.txtDescripcionPerro.setText(listaAnimalesOut.get(i).getDescripcion());
+        holder.imagenZorro.setImageResource(listaAnimalesOut.get(i).getImagen());
+        holder.txtZorro.setText(listaAnimalesOut.get(i).getNombre());
+        holder.txtDescripcionZorro.setText(listaAnimalesOut.get(i).getDescripcion());
         return view;
     }
 
     class ViewHolder{
-        @BindView(R.id.imagenPerro)
-        ImageView imagenPerro;
-        @BindView(R.id.txtPerro)
-        TextView txtPerro;
-        @BindView(R.id.txtDescripcionPerro)
-        TextView txtDescripcionPerro;
+        @BindView(R.id.imagenZorro)
+        ImageView imagenZorro;
+        @BindView(R.id.txtZorro)
+        TextView txtZorro;
+        @BindView(R.id.txtDescripcionZorro)
+        TextView txtDescripcionZorro;
 
         public ViewHolder(View view) { ButterKnife.bind(this,view); }
     }
